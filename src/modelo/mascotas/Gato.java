@@ -1,4 +1,4 @@
 package modelo.mascotas;
 
-public class gato {
+public class Gato {
 }

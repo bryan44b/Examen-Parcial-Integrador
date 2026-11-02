@@ -1,4 +1,4 @@
 package modelo.mascotas;
 
-public class Ave_exotica {
+public class AveExotica {
 }
