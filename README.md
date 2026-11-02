@@ -59,3 +59,39 @@ atributos de tipo `String`.
 | `RegistroConsulta` | Basta guardar cada consulta como texto en el historial; una clase aparte no aporta comportamiento. |
 
 ![Diagrama_Clasess.png](Diagrama_Clasess.png)
+
+# Justificación de las relaciones
+
+Para elegir el tipo de cada relación pensé en el ciclo de vida: **¿qué pasa con una de las partes si la otra se elimina?**
+
+- **Composición:** la parte no existe sin el todo y desaparece con él.
+- **Agregación:** la parte existe por sí misma y sigue existiendo si el todo se elimina.
+- **Asociación:** son objetos independientes que solo se conocen entre sí.
+
+## Composición
+
+**Mascota < HistorialClinico (1 a 1, rol `historial`).** El historial no tiene sentido sin su mascota: la mascota lo crea en su constructor y, si se elimina del sistema, su historial desaparece con ella. No es agregación porque el historial no puede existir ni compartirse por separado.
+
+**Clinica < Consultorio (1 a 1..\*, rol `consultorios`).** Los consultorios pertenecen a la clínica, solo ella los crea y desaparecen con ella; un consultorio no puede pasar a otra clínica. No es agregación porque no tiene vida propia fuera de la clínica.
+
+## Agregación
+
+**Clinica < Veterinario (0..\* a 0..\*, rol `veterinarios`).** El veterinario existe aunque la clínica cierre y puede trabajar en otra, por eso la clínica lo recibe ya creado y no lo crea ella. Si la clínica se elimina, el veterinario sigue existiendo, así que no es composición.
+
+## Asociación
+
+**Mascota > Dueno (0..\* a 1, rol `dueno`).** Una mascota siempre tiene un dueño, pero el dueño es una persona independiente: si la mascota se da de baja, el dueño sigue existiendo. Ninguno es parte del otro, por eso es asociación.
+
+**Clinica > Mascota (1 a 0..\*, rol `mascotas`).** La clínica solo guarda a las mascotas registradas para buscarlas y darlas de baja, pero no las crea ni es su dueña. Las mascotas son objetos independientes que se registran y se retiran del sistema, por eso no es agregación ni composición.
+
+**Clinica > Cita (1 a 0..\*, rol `citas`).** La clínica lleva la agenda de citas para consultarlas y validar las reglas de horario y consultorio. La cita es un acuerdo entre objetos que ya existen (mascota, veterinario y consultorio), no una parte de la clínica, por eso es asociación.
+
+**Cita > Mascota (0..\* a 1, rol `mascota`).** Una cita solo hace referencia a la mascota que se atiende. Si la cita se cancela o se elimina, la mascota sigue existiendo, por eso no es composición.
+
+**Cita > Veterinario (0..\* a 1, rol `veterinario`).** La cita referencia al veterinario que la atiende, pero este no depende de ella: un mismo veterinario puede tener muchas citas y, si una se elimina, él sigue existiendo.
+
+**Cita > Consultorio (0..\* a 1, rol `consultorio`).** La cita solo usa un consultorio de la clínica para una fecha y hora. El consultorio pertenece a la clínica (composición) y no a la cita, así que desaparecer la cita no lo afecta.
+
+**Cita > Facturable (0..\* a 1, rol `servicio`).** La cita guarda el servicio que se va a cobrar a través de la interfaz, sin depender de una clase concreta: puede ser consulta, vacunación o cirugía. El servicio solo calcula su costo y no tiene un ciclo de vida atado a la cita, por eso es asociación.
+
+**Comprobante > Cita (0..1 a 1, rol `cita`).** El comprobante hace referencia a la cita atendida que cobra. La cita existe sin comprobante mientras está programada o cancelada, y si el comprobante se elimina la cita sigue existiendo, por eso no es composición.
