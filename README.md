@@ -4,14 +4,12 @@
 
 1. [Descripción](#descripción)
 2. [Tecnologías](#tecnologías)
-3. [Modelo de la solución](#modelo-de-la-solución)
-4. [Estructura del proyecto](#estructura-del-proyecto)
-5. [Conceptos aplicados](#conceptos-aplicados)
-6. [Instalación y ejecución](#instalación-y-ejecución)
-7. [Ejemplo de uso](#ejemplo-de-uso)
-8. [Reglas de negocio](#reglas-de-negocio)
-9. [Reflexión](#reflexión)
-10. [Autor](#autor)
+3. [Estructura del proyecto](#estructura-del-proyecto)
+4. [Instalación y ejecución](#instalación-y-ejecución)
+5. [Ejemplo de uso](#ejemplo-de-uso)
+6. [Reglas de negocio](#reglas-de-negocio)
+7. [Reflexión](#reflexión)
+8. [Autor](#autor)
 
 ## Descripción
 
