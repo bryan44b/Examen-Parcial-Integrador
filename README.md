@@ -52,8 +52,6 @@ Usé herencia porque en los dos casos la hija **es un** tipo de la clase padre y
 | `Clinica` con `Consultorio` | Composición | La clínica crea sus consultorios dentro de `crearConsultorio`, el constructor de `Consultorio` es de paquete y los consultorios desaparecen con ella. |
 | `Mascota` con `HistorialClinico` | Composición | La mascota crea su historial en su propio constructor, nadie más lo comparte y si la mascota se da de baja el historial se va con ella. |
 
-Pregunta guía para elegir cada una: *¿qué pasa con una de las partes si la otra se elimina?* Si la parte sigue existiendo es agregación o asociación; si desaparece con el todo es composición.
-
 ## Estructura del proyecto
 
 ```text
