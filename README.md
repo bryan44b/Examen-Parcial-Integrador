@@ -23,16 +23,11 @@ Los datos viven en memoria mientras el programa corre (colecciones de Java). No 
 
 | Herramienta | Versión / nombre |
 | --- | --- |
-| Java | [COMPLETA: versión de JDK que usas, mínimo 17] |
-| Herramienta UML | [COMPLETA: herramienta con la que dibujaste el diagrama, por ejemplo PlantUML] |
-| IDE | [COMPLETA: IDE que usas, por ejemplo IntelliJ IDEA, NetBeans o VS Code] |
+| Java | [JDK 17] |
+| Herramienta UML | [Drawio] |
+| IDE | [IntelliJ IDEA] |
 | Control de versiones | Git y GitHub |
 
-## Modelo de la solución
-
-![Diagrama de clases de PetCare](docs/diagramas/diagrama-clases-petcare.png)
-
-El archivo fuente editable del diagrama está en [`docs/diagramas/diagrama-clases-petcare.puml`](docs/diagramas/diagrama-clases-petcare.puml).
 
 ### Herencia
 
@@ -107,9 +102,6 @@ petcare-poo-java/
 | `modelo.mascotas` | Las mascotas, sus tipos y su historial clínico. |
 | `modelo.servicios` | Los servicios que se cobran y la interfaz que permite calcular su costo. |
 
-## Conceptos aplicados
-
-Las líneas corresponden a los archivos de `src/`.
 
 | Concepto | Archivo y línea |
 | --- | --- |
@@ -144,8 +136,8 @@ javac -version
 **1. Clonar el repositorio**
 
 ```bash
-git clone [COMPLETA: URL de tu repositorio, por ejemplo https://github.com/tu-usuario/petcare-poo-java.git]
-cd petcare-poo-java
+git clone [https://github.com/bryan44b/Examen-Parcial-Integrador]
+cd Examen-Parcial-Integrador
 ```
 
 **2. Compilar**
