@@ -257,9 +257,8 @@ El historial de Botas muestra la consulta que se atendió, con fecha, servicio, 
 
 **¿Qué mejorarías si tuvieras más tiempo?**
 
-* **Persistencia de datos:** Integraría conexión a una base de datos (como SQLite) o manejo de archivos (JSON/CSV) para que la información de los registros y el historial clínico no se pierda al salir del sistema.
 * **Interfaz de Usuario (UI):** Migraría el proyecto de la línea de comandos a una Interfaz Gráfica (GUI) para hacer el sistema más intuitivo y visualmente agradable para el usuario final.
-* **Exportación de documentos:** Agregaría una funcionalidad para generar y exportar los comprobantes de pago y los historiales clínicos directamente a formato PDF.
+
 
 **Uso de la IA**
 
