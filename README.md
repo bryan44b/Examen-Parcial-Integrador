@@ -21,7 +21,7 @@ Los datos viven en memoria mientras el programa corre (colecciones de Java). No 
 
 | Herramienta | Versión / nombre |
 | --- | --- |
-| Java | [JDK 17] |
+| Java | [JDK 27] |
 | Herramienta UML | [Drawio] |
 | IDE | [IntelliJ IDEA] |
 | Control de versiones | Git y GitHub |
