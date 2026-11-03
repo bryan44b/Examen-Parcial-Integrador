@@ -2,6 +2,7 @@
 package modelo.mascotas;
 
 import modelo.personas.Dueno;
+import modelo.personas.Persona;
 
 public abstract class Mascota {
 
@@ -57,4 +58,15 @@ public abstract class Mascota {
 
     public abstract String hacerSonido();
 
+    public String getNombre() {
+        return this.nombre;
+    }
+
+    public HistorialClinico getHistorial() {
+        return this.historial;
+    }
+
+    public Persona getDueno() {
+        return this.dueno;
+    }
 }
